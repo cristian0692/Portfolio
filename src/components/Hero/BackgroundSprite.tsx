@@ -1,4 +1,4 @@
-import backgroundSprite from "../assets/hero/background.png";
+import backgroundSprite from "../../assets/hero/background.png";
 
 const BackgroundSprite = () => {
   return (

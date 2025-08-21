@@ -1,8 +1,7 @@
 import { Menu } from "lucide-react";
-import { Sheet, SheetClose, SheetContent, SheetHeader, SheetTrigger } from "./ui/sheet";
+import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
 
 import MobileLink from "./MobileLink";
-import { Button } from "./ui/button";
 import { useState } from "react";
 
 const MobileNav = () => {

@@ -1,5 +1,5 @@
-import { AspectRatio } from "./ui/aspect-ratio";
-import photo from "../assets/photo-2.jpg";
+import { AspectRatio } from "../ui/aspect-ratio";
+import photo from "../../assets/photo-2.jpg";
 
 const HeroPhoto = () => {
   return (
