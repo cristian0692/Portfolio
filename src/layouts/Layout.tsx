@@ -1,6 +1,7 @@
 import Footer from "@/components/Footer/Footer";
 import Header from "@/components/Header/Header";
 import Hero from "@/components/Hero/Hero";
+import ImageViewer from "@/components/ImageViewer/ImageViewer";
 
 type Props = {
   children: React.ReactNode;
@@ -11,6 +12,7 @@ type Props = {
 const Layout = ({ children, headerButtons, deleteHero = false }: Props) => {
   return (
     <div className="flex flex-col min-h-screen font-rounded w-full scroll-smooth">
+      <ImageViewer />
       <Header buttons={headerButtons} />
       {!deleteHero && <Hero />}
       <div className="bg-orange-200">
@@ -18,7 +20,6 @@ const Layout = ({ children, headerButtons, deleteHero = false }: Props) => {
           {children}
         </div>
       </div>
-
       <Footer />
     </div>
   );

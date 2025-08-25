@@ -4,6 +4,7 @@ import { Button } from "../ui/button";
 import MadeWith from "./ProjectCard/MadeWith";
 import SkillsUsed from "./ProjectCard/SkillsUsed";
 import { useNavigate } from "react-router-dom";
+import SkillsUsedAlone from "./ProjectCard/SkillsUsedAlone";
 
 type Props = {
   content: customCardContent;
@@ -15,7 +16,7 @@ const ProjectCard = ({ content }: Props) => {
     navigate(link);
   };
   return (
-    <div className="lg:h-auto  w-full bg-orange-200 border-none flex md:flex-row flex-col gap-0 rounded-4xl">
+    <div className="lg:h-auto w-full bg-orange-200 border-none flex md:flex-row flex-col gap-0 rounded-4xl">
       <PhotoContainer imageUrls={content.imagesUrl} />
       <div className="flex flex-1 flex-col p-10 h-auto items-start justify-between gap-7">
         <div className="flex flex-col items-start gap-4">
@@ -37,8 +38,14 @@ const ProjectCard = ({ content }: Props) => {
         </div>
         <div className="flex flex-col gap-10 w-full">
           <div className="flex md:flex-col w-full justify-center md:items-start items-center gap-4">
-            <SkillsUsed skillsUsed={content.skillsUsed} />
-            <MadeWith createdBy={content.createdBy} />
+            {content.createdBy.length == 0 ? (
+              <SkillsUsedAlone skillsUsed={content.skillsUsed} />
+            ) : (
+              <>
+                <SkillsUsed skillsUsed={content.skillsUsed} />
+                <MadeWith createdBy={content.createdBy} />
+              </>
+            )}
           </div>
           {content.customPageLink && (
             <Button

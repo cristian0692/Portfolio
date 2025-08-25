@@ -20,7 +20,7 @@ const AppRoutes = () => {
         element={
           <Layout
             deleteHero
-            headerButtons={["home", "features", "more details", "contact"]}
+            headerButtons={["home", "features", "moreDetails", "contact"]}
           >
             <CluckyProject />
           </Layout>

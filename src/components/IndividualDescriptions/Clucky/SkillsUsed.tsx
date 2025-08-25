@@ -1,4 +1,4 @@
-import { getSkillIcon } from "@/utils/skillIcons";
+import { getSkillIcon } from "@/lib/skillIcons/skillIcons";
 
 type Props = {
   APIs?: string[];
@@ -9,14 +9,14 @@ const SkillsUsed = ({ APIs, skills }: Props) => {
   return (
     <div className="flex flex-col gap-10">
       <div className="text-xl flex gap-4 items-center">
-        <div className="underline">Skills Used:</div>
+        <div>Skills Used:</div>
         {skills.map((skill) => {
           return getSkillIcon(skill);
         })}
       </div>
       {APIs && (
         <div className="text-xl flex gap-4 items-center">
-          <div className="underline">APIs Used:</div>
+          <div>APIs Used:</div>
           {APIs.map((api) => getSkillIcon(api))}
         </div>
       )}

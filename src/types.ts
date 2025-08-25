@@ -35,7 +35,7 @@ export type PageDescription = {
   APIsUsed?: string[];
   pageDescriptions: PageDescriptions[];
 };
-type PageDescriptions = {
+export type PageDescriptions = {
   imageUrl: string;
   title: string;
   description: string;
