@@ -3,28 +3,40 @@ import { Sheet, SheetContent, SheetHeader, SheetTrigger } from "../ui/sheet";
 
 import MobileLink from "./MobileLink";
 import { useState } from "react";
-
-const MobileNav = () => {
+type Props = {
+  buttons: string[];
+  formatizeText: (text: string) => string;
+};
+const MobileNav = ({ buttons, formatizeText }: Props) => {
   const [open, setOpen] = useState(false);
 
   const closeSheet = () => {
     setOpen(false);
   };
+
+  const isMainPage = () => {
+    return !buttons.some((text) => text === "home");
+  };
   return (
-    <div className="flex w-full flex-row p-10 justify-end">
+    <div
+      className={`flex w-full flex-row justify-end ${
+        isMainPage() ? "p-10" : "p-5"
+      }`}
+    >
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <Menu size={30} strokeWidth={3} color="#000000" />
         </SheetTrigger>
         <SheetContent>
           <SheetHeader>
-
             <div className="mt-20 flex flex-col items-center justify-center gap-3">
-              <MobileLink text="About me" sectionId="aboutMe" onClick={closeSheet} />
-              <MobileLink text="My Works" sectionId="myWorks" onClick={closeSheet} />
-              <MobileLink text="Skills" onClick={closeSheet} />
-              <MobileLink text="Contact" onClick={closeSheet} />
-
+              {buttons.map((section) => (
+                <MobileLink
+                  text={formatizeText(section)}
+                  sectionId={section}
+                  onClick={closeSheet}
+                />
+              ))}
             </div>
           </SheetHeader>
         </SheetContent>

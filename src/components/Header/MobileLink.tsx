@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { Button } from "../ui/button";
 
 type Props = {
@@ -7,7 +8,12 @@ type Props = {
 };
 
 const MobileLink = ({ text, sectionId, onClick }: Props) => {
+  const navigate = useNavigate();
+
   const moveToSection = () => {
+    if (sectionId == "home") {
+      navigate("/");
+    }
     onClick();
 
     setTimeout(() => {
@@ -18,7 +24,11 @@ const MobileLink = ({ text, sectionId, onClick }: Props) => {
     }, 500);
   };
   return (
-    <Button onClick={moveToSection} className="text-2xl hover:bg-orange-300 font-rounded" variant="ghost">
+    <Button
+      onClick={moveToSection}
+      className="text-2xl hover:bg-orange-300 font-rounded"
+      variant="ghost"
+    >
       {text}
     </Button>
   );

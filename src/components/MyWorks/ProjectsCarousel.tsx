@@ -11,12 +11,15 @@ const ProjectsCoursel = () => {
         align: "start",
         loop: true, // This is the key line to make it loop
       }}
-      className="w-full flex items-center"
+      className="w-full flex items-center z-3"
     >
       <div className="hidden lg:flex justify-center p-10">
         <CustomArrow direction="left" isScrollPrev size={25} />
       </div>
-      <div className="mx-auto flex md:flex-col flex-row justify-between lg:w-[75%] w-full">
+      <div
+        id="myWorks"
+        className="mx-auto flex md:flex-col flex-row justify-between lg:w-[75%] w-full"
+      >
         <CarouselContent className="-mt-1">
           {MY_WORKS.map((cardContent, index) => (
             <CarouselItem key={index}>

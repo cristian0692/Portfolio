@@ -6,9 +6,12 @@ type Props = {
 const PhotoContainer = ({ imageUrls }: Props) => {
   const getImage = (imageName: string, ratioX: number, ratioY: number) => {
     return (
-      <AspectRatio className="bg-gray-100 flex rounded-lg" ratio={ratioX / ratioY}>
+      <AspectRatio
+        className="bg-gray-100 flex rounded-lg"
+        ratio={ratioX / ratioY}
+      >
         <img
-          className="w-full h-auto object-contain rounded-lg bg-orange-400"
+          className="w-full h-auto object-contain rounded-lg bg-orange-200"
           src={`/images/${imageName}`}
           alt="card image"
         />

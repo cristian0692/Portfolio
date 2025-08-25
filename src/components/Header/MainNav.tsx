@@ -1,14 +1,23 @@
 import HeaderLink from "./HeaderLink";
-
-const MainNav = () => {
+type Props = {
+  buttons: string[];
+  formatizeText: (text: string) => string;
+};
+const MainNav = ({ buttons, formatizeText }: Props) => {
+  const isMainPage = () => {
+    return !buttons.some((text) => text === "home");
+  };
   return (
     <div className="flex justify-center">
-      <div className="container flex flex-1 justify-start m-10 max-h-24">
+      <div
+        className={`container flex flex-1 justify-start max-h-24 ${
+          isMainPage() ? "m-10" : "m-0"
+        }`}
+      >
         <div className="ml-[10%] flex w-[40%] justify-between items-center h-24">
-          <HeaderLink text="About me" sectionId="aboutMe" />
-          <HeaderLink text="My Works" sectionId="myWorks"/>
-          <HeaderLink text="Skills"/>
-          <HeaderLink text="Contact" />
+          {buttons.map((section) => (
+            <HeaderLink text={formatizeText(section)} sectionId={section} />
+          ))}
         </div>
       </div>
     </div>

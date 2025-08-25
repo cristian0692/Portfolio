@@ -1,12 +1,12 @@
 import ProjectsCoursel from "./ProjectsCarousel";
 
 const MyWorks = () => {
-    return (
-        <div id="myWorks" className="flex flex-col w-full items-center gap-20">
-            <h1 className="text-4xl">My Works</h1>
-            <ProjectsCoursel />
-        </div>
-    );
+  return (
+    <div className="relative flex flex-col items-center gap-20 bg-orange-100 rounded-3xl p-10 py-15 mb-10 overflow-hidden">
+      <h1 className="text-4xl z-3">My Works</h1>
+      <ProjectsCoursel />
+    </div>
+  );
 };
 
 export default MyWorks;
