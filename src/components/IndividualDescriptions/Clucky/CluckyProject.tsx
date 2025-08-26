@@ -11,11 +11,17 @@ const CluckyProject = () => {
   return (
     <div className="md:px-20 px-5 flex flex-col gap-15">
       <div className="w-full flex lg:flex-row flex-col gap-10 justify-center">
-        <div className="flex-6">
-          <img
+        <div className="flex-6 relative">
+          <div
             onClick={() => {
               setImages(CLUCKY.imageURLs, 0);
             }}
+            className="absolute left-0 top-0 w-full h-full hover:bg-black/30 hover:text-white text-transparent flex items-center justify-center text-2xl"
+          >
+            Click
+          </div>
+          <img
+            className="h-full object-cover"
             src={`/images/${CLUCKY.imageURLs[0]}`}
           />
         </div>

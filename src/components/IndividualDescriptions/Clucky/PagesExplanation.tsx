@@ -31,7 +31,7 @@ const PagesExplanation = ({ pages }: Props) => {
                 className="md:flex-3 md:max-w-100 h-full flex justify-start"
               >
                 <img
-                  className="hover:scale-120 w-full h-auto object-contain"
+                  className="hover:scale-105 w-full h-auto object-contain"
                   src={`/images/${page.imageUrl}`}
                 />
               </div>

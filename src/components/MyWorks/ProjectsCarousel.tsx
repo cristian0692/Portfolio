@@ -1,10 +1,10 @@
 import CustomArrow from "./CustomArrow";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import ProjectCard from "./ProjectCard";
+import ProjectCard from "./ProjectCard/ProjectCard";
 import { MY_WORKS } from "@/config/my-works-config";
 import ArrowsFooter from "./ArrowsFooter";
 
-const ProjectsCoursel = () => {
+const ProjectsCarousel = () => {
   return (
     <Carousel
       opts={{
@@ -13,12 +13,12 @@ const ProjectsCoursel = () => {
       }}
       className="w-full flex items-center z-3"
     >
-      <div className="hidden lg:flex justify-center p-10">
+      <div className="hidden lg:flex justify-center mx-auto">
         <CustomArrow direction="left" isScrollPrev size={25} />
       </div>
       <div
         id="myWorks"
-        className="mx-auto flex md:flex-col flex-row justify-between lg:w-[75%] w-full"
+        className="mx-auto flex md:flex-col flex-row justify-between lg:w-[85%] w-full"
       >
         <CarouselContent className="-mt-1">
           {MY_WORKS.map((cardContent, index) => (
@@ -34,11 +34,11 @@ const ProjectsCoursel = () => {
         </div>
       </div>
 
-      <div className="hidden lg:flex justify-center p-10">
+      <div className="hidden lg:flex justify-center mx-auto">
         <CustomArrow direction="right" size={25} />
       </div>
     </Carousel>
   );
 };
 
-export default ProjectsCoursel;
+export default ProjectsCarousel;

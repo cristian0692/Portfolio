@@ -13,25 +13,29 @@ export const MY_WORKS: CardContent[] = [
       "myWorks/clucky3.png",
     ],
     liveServer: "https://clucky-frontend.onrender.com/",
-    additionalInfo: "Cities in the Database: Antwerp, Rome, Lyon, Milan, Paris",
+    additionalInfo: {
+      database: "Cities in the Database: Antwerp, Rome, Lyon, Milan, Paris",
+      slowLiveServer: true,
+    },
     customPageLink: "/Clucky-Project",
   },
   {
-    title: "CastleWalls",
+    title: "CastleWall",
     description:
-      "Project for the first semester of the first year of the Bachelor's of Computer Science. The project is done in pure java and the storing is done with postresql. In this project I got familiar with the Java language and learned a ton on how to communicate with your teammamtes.",
-    createdBy: ["Peter Duga"],
+      "Project for the first semester of the first year of the Bachelor's of Computer Science. The project is done in pure java and the storing is done with postresql. In this project I got familiar with the Java language and learned a ton on how to communicate with your teammamtes. Especially because we were 6 people and most did not have experience with programming before, it was quite a challenge.",
+    createdBy: ["Peter Duga", "+ 4 other"],
     skillsUsed: ["Java", "PostgreSQL"],
     imagesUrl: [
       "myWorks/castlewall1.png",
       "myWorks/castlewall2.png",
       "myWorks/castlewall3.png",
     ],
+    additionalInfo: {},
   },
   {
     title: "Quarto!",
     description:
-      "A project done as an exam for the 2nd Semester of the 1st Year of the Bachelor of Computer Science. Here the project itself is done with java and javafx. It stores the data in a postgresql database. Additionally to the game Quarto, we did a website which showcases the game, our team that made the game and also leaderboards from the collected game data. ",
+      "A project done as an exam for the 2nd Semester of the 1st Year of the Bachelor of Computer Science. Here the project itself is done with java and javafx. It stores the data in a postgresql database. Additionally to the game Quarto, we did a website which showcases the game, our team that made the game and also leaderboards from the collected game data. In this project I learned what true teamwork is. I am proud of how this project turned out, though since it was a university project, it isn’t publicly available.",
     createdBy: ["Maxim Cepoi", "Boyan Georgiev", "Joseph Harter-Hartis"],
     skillsUsed: ["Java", "PostgreSQL", "Javascript", "HTML", "CSS"],
     imagesUrl: [
@@ -39,5 +43,6 @@ export const MY_WORKS: CardContent[] = [
       "myWorks/quarto2.png",
       "myWorks/quarto3.png",
     ],
+    additionalInfo: {},
   },
 ];

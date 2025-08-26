@@ -17,7 +17,7 @@ const SkillsUsed = ({ skillsUsed }: Props) => {
         if (index > 3) return;
 
         return (
-          <span className="flex lg:flex-row flex-col">
+          <span className="flex md:flex-row flex-col">
             <span className="text-custom-orange">{skill}</span>{" "}
             {index != 2 && index != skillsUsed.length - 1 && (
               <Dot className="md:w-auto w-full" />

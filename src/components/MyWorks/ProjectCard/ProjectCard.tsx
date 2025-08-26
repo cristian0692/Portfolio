@@ -1,10 +1,10 @@
 import type { CardContent as customCardContent } from "@/types";
 import PhotoContainer from "./PhotoContainer";
-import { Button } from "../ui/button";
-import MadeWith from "./ProjectCard/MadeWith";
-import SkillsUsed from "./ProjectCard/SkillsUsed";
+import { Button } from "../../ui/button";
+import MadeWith from "./MadeWith";
+import SkillsUsed from "./SkillsUsed";
 import { useNavigate } from "react-router-dom";
-import SkillsUsedAlone from "./ProjectCard/SkillsUsedAlone";
+import SkillsUsedAlone from "./SkillsUsedAlone";
 
 type Props = {
   content: customCardContent;
@@ -16,7 +16,7 @@ const ProjectCard = ({ content }: Props) => {
     navigate(link);
   };
   return (
-    <div className="lg:h-auto w-full bg-orange-200 border-none flex md:flex-row flex-col gap-0 rounded-4xl">
+    <div className="lg:h-auto w-full bg-orange-200 border-none flex lg:flex-row items-center flex-col gap-0 rounded-4xl">
       <PhotoContainer imageUrls={content.imagesUrl} />
       <div className="flex flex-1 flex-col p-10 h-auto items-start justify-between gap-7">
         <div className="flex flex-col items-start gap-4">
@@ -33,8 +33,14 @@ const ProjectCard = ({ content }: Props) => {
               Click Here to see the Live Server!
             </a>
           )}
-
-          {content.additionalInfo && <div>{content.additionalInfo}</div>}
+          {content.additionalInfo.slowLiveServer && (
+            <div className="-mt-4 text-sm text-gray-500">
+              (The server will take a minute or two to load the DB at first)
+            </div>
+          )}
+          {content.additionalInfo.database && (
+            <div>{content.additionalInfo.database}</div>
+          )}
         </div>
         <div className="flex flex-col gap-10 w-full">
           <div className="flex md:flex-col w-full justify-center md:items-start items-center gap-4">

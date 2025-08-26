@@ -6,7 +6,10 @@ export type CardContent = {
   imagesUrl: string[];
   createdBy: string[];
   liveServer?: string;
-  additionalInfo?: string;
+  additionalInfo: {
+    database?: string;
+    slowLiveServer?: boolean;
+  };
   customPageLink?: string;
 };
 export type HobbyContent = {

@@ -17,7 +17,12 @@ const LinkSection = ({ links }: Props) => {
         >
           Live Server
         </a>
-        <a href={links.tutorial} className="underline text-lg">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={links.tutorial}
+          className="underline text-lg"
+        >
           Tutorial that I followed
         </a>
       </div>

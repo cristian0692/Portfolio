@@ -13,7 +13,7 @@ const AboutMe = () => {
         <div className="lg:w-[45%] w-[100%] bg-custom-beige border-5 border-custom-orange p-10 rounded-xl text-lg flex flex-col gap-3">
           <div>
             <span className="text-2xl">O</span>ver the past 5 years, I've
-            discovered a deep passion for programming and{" "}
+            discovered a passion for programming and{" "}
             <span className="text-custom-orange">completed</span> a professional{" "}
             <span className="text-custom-orange">
               Software Engineering course
@@ -21,8 +21,11 @@ const AboutMe = () => {
             to hone my skills.
           </div>
           <div>
-            I enjoy working on websites and thrive on solving complex problems
-            through code. I strive to be friendly, helpful and
+            {" "}
+            I have worked on many projects, most personal projects for fun that
+            have not seen the day of light. Now, I enjoy building websites — I
+            enjoy working on the frontend, but I’m comfortable with backend
+            development as well. I strive to be friendly, helpful and
             <span className="text-custom-orange"> hardworking</span> in
             everything I do, and I hope to continue growing as a programmer for
             years to come.

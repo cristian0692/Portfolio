@@ -10,7 +10,7 @@ const AppRoutes = () => {
       <Route
         path="/"
         element={
-          <Layout headerButtons={["aboutMe", "myWorks", "skills", "contact"]}>
+          <Layout headerButtons={["aboutMe", "myWorks", "contact"]}>
             <AboutMe /> <MyWorks />
           </Layout>
         }
