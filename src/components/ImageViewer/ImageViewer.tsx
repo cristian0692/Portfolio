@@ -1,5 +1,5 @@
 import { useImageStore } from "../../lib/imageStore";
-import MainImage from "./mainImage";
+import FocusedImage from "./FocusedImage";
 import CloseButton from "./CloseButton";
 import LeftArrowButton from "./LeftArrowButton";
 import RightArrowButton from "./RightArrowButton";
@@ -17,7 +17,7 @@ const ImageViewer = () => {
           <div className="md:block hidden">
             <LeftArrowButton size={40} />
           </div>
-          <MainImage />
+          <FocusedImage />
           <div className="md:block hidden">
             <RightArrowButton size={40} />
           </div>

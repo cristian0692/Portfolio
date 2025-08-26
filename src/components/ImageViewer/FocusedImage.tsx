@@ -2,7 +2,7 @@ import { useImageStore } from "@/lib/imageStore";
 import LeftArrowButton from "./LeftArrowButton";
 import RightArrowButton from "./RightArrowButton";
 
-const MainImage = () => {
+const FocusedImage = () => {
   const index = useImageStore((state) => state.index);
   const imageURLs = useImageStore((state) => state.imageURLs);
 
@@ -28,4 +28,4 @@ const MainImage = () => {
   );
 };
 
-export default MainImage;
+export default FocusedImage;
