@@ -4,7 +4,7 @@ import smallX from "../../assets/hero/smallX.png";
 import smallCircle from "../../assets/hero/smallCircle.png";
 import line from "../../assets/hero/line.png";
 import x2 from "../../assets/hero/x2.png";
-import photoline from "../../assets/hero/photoline.png";
+import photoLine from "../../assets/hero/photoLine.png";
 const ShapeSprites = () => {
   return (
     <>
@@ -59,8 +59,8 @@ const ShapeSprites = () => {
         className="absolute z-5  lg:block
                 lg:right-[33%] lg:bottom-[-15%] lg:w-[200px]
                 hidden"
-        src={photoline}
-        alt="photoline"
+        src={photoLine}
+        alt="photoLine"
       />
     </>
   );
