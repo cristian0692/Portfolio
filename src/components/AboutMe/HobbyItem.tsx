@@ -9,9 +9,9 @@ type Props = {
 const HobbyItem = ({ hobby }: Props) => {
   return (
     <Tooltip>
-      <TooltipTrigger className="w-[90px] flex justify-center hover:-translate-y-4 transition duration-200">
+      <TooltipTrigger className="md:w-[90px] w-[60px] flex justify-center hover:-translate-y-4 transition duration-200">
         <img
-          className="h-[auto] max-h-[64px] w-[auto] max-w-[90px] object-contain"
+          className="h-[auto] max-h-[64px] w-[auto] md:max-w-[90px] max-w-[60px] object-contain"
           src={`/images/${hobby.imagePath}`}
           alt={hobby.title}
         />
