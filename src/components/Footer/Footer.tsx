@@ -18,7 +18,7 @@ const Footer = () => {
       </div>
       <div>© 2025 Cristian Bolohan. All rights reserved.</div>
       <div className="text-sm text-black/59">
-        Special thanks to my partner for making the photo and supporting me
+        Special thanks to my girlfriend for making the photo and supporting me
         through the development
       </div>
     </div>

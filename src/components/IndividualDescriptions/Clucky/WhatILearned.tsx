@@ -1,8 +1,8 @@
 const WhatILearned = () => {
   return (
     <div className="bg-custom-beige border-5 rounded-lg border-custom-orange p-4 flex flex-col gap-5">
-      <div className="text-4xl">What I Learned</div>
-      <div className="text-xl">
+      <div className="md:text-4xl text-2xl">What I Learned</div>
+      <div className="md:text-xl text-md">
         I learned a lot about how{" "}
         <span className="text-custom-orange">React uses Hooks</span> and effects
         to manage data, as well as how to{" "}

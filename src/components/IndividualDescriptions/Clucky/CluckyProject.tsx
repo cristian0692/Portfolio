@@ -26,10 +26,10 @@ const CluckyProject = () => {
           />
         </div>
         <div className="flex-4 flex flex-col gap-10 justify-end">
-          <h1 className="text-6xl w-full text-center p-5 border-5 border-custom-orange bg-custom-beige rounded-xl">
+          <h1 className="md:text-6xl text-4xl w-full text-center p-5 border-5 border-custom-orange bg-custom-beige rounded-xl">
             {CLUCKY.title}
           </h1>
-          <p className="text-lg">
+          <p className="md:text-lg text-md">
             A simulation of a food ordering app build with MERN stack. It also
             utilizes Stripe for simulating the payment process (you can use a
             stripe filler card to test) and Auth0 for secure Authentication. The

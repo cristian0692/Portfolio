@@ -16,14 +16,14 @@ const PagesExplanation = ({ pages }: Props) => {
   const setImages = useImageStore((state) => state.setImages);
   return (
     <div className="flex flex-col gap-10 items-start">
-      <div id="moreDetails" className="text-3xl">
+      <div id="moreDetails" className="md:text-3xl text-2xl">
         Each Page Explained
       </div>
       <div className="flex flex-col gap-15">
         {pages.map((page, index) => (
           <div className="flex flex-col gap-10">
             <div className="flex lg:flex-row flex-col gap-10 ">
-              <div className="h-full text-3xl flex items-center justify-center">
+              <div className="h-full md:text-3xl text-2xl flex items-center justify-center">
                 {index + 1}.
               </div>
               <div
@@ -36,8 +36,8 @@ const PagesExplanation = ({ pages }: Props) => {
                 />
               </div>
               <div className="md:flex-4 flex flex-col gap-3">
-                <div className="text-2xl">{page.title}</div>
-                <div className="text-lg">{page.description}</div>
+                <div className="md:text-2xl text-xl">{page.title}</div>
+                <div className="md:text-lg text-md">{page.description}</div>
               </div>
             </div>
             {index != pages.length - 1 && <CustomSeparator />}
