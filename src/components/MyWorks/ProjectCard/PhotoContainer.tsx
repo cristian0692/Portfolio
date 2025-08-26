@@ -8,20 +8,20 @@ const PhotoContainer = ({ imageUrls }: Props) => {
   const getImage = (imageName: string, index: number) => {
     return (
       <div
-        className="bg-gray-100 flex rounded-lg"
+        className="bg-gray-100 flex rounded-xl"
         onClick={() => setImages(imageUrls, index)}
       >
         <img
-          className="hover:scale-120 transition duration-200 h-full object-cover rounded-lg bg-orange-200"
+          className="hover:scale-105 transition duration-200 h-full object-cover rounded-xl bg-orange-200"
           src={`/images/${imageName}`}
         />
       </div>
     );
   };
   return (
-    <div className="lg:w-[50%] w-full h-full lg:p-0 lg:pl-5 md:p-10 p-5 pt-10 flex flex-col gap-5 justify-center">
+    <div className="xl:w-[50%] w-full h-full flex p-5 flex-col gap-5 justify-center">
       <div className="h-full hover:z-5">{getImage(imageUrls[0], 0)}</div>
-      <div className="w-full flex-row lg:flex hidden items-center gap-5">
+      <div className="w-full flex-row xl:flex hidden items-center gap-5">
         <div className="md:w-[50%] hover:z-5">{getImage(imageUrls[1], 1)}</div>
         <div className="md:w-[50%] hover:z-5">{getImage(imageUrls[2], 2)}</div>
       </div>

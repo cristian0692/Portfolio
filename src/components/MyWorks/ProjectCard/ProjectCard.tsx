@@ -16,7 +16,7 @@ const ProjectCard = ({ content }: Props) => {
     navigate(link);
   };
   return (
-    <div className="lg:h-auto w-full bg-orange-200 border-none flex lg:flex-row items-center flex-col gap-0 rounded-4xl">
+    <div className="xl:h-auto w-full bg-orange-200 border-none flex xl:flex-row items-center flex-col gap-0 rounded-4xl">
       <PhotoContainer imageUrls={content.imagesUrl} />
       <div className="flex flex-1 flex-col p-10 h-auto items-start justify-between gap-7">
         <div className="flex flex-col items-start gap-4">
@@ -56,7 +56,7 @@ const ProjectCard = ({ content }: Props) => {
           {content.customPageLink && (
             <Button
               onClick={() => handleClick(String(content.customPageLink))}
-              className="p-7 text-lg"
+              className="p-7 text-xl"
             >
               Find Out More
             </Button>

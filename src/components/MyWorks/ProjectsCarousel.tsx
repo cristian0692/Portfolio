@@ -20,7 +20,7 @@ const ProjectsCarousel = () => {
         id="myWorks"
         className="mx-auto flex md:flex-col flex-row justify-between lg:w-[85%] w-full"
       >
-        <CarouselContent className="-mt-1">
+        <CarouselContent className="-mt-1 flex items-center">
           {MY_WORKS.map((cardContent, index) => (
             <CarouselItem key={index}>
               <div className="md:px-1 px-4">

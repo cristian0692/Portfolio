@@ -9,8 +9,8 @@ const AboutMe = () => {
       className="w-full bg-orange-200 flex flex-col items-center gap-10 pb-10 md: pt-0 pt-30"
     >
       <h2 className="text-4xl">About Me</h2>
-      <div className="flex justify-center items-center gap-10 lg:flex-row flex-col p-10">
-        <div className="lg:w-[45%] w-[100%] bg-custom-beige border-5 border-custom-orange p-10 rounded-xl text-lg flex flex-col gap-3">
+      <div className="flex justify-center items-center gap-10 xl:flex-row flex-col p-10">
+        <div className="xl:w-[45%] w-[100%] bg-custom-beige border-5 border-custom-orange p-10 rounded-xl text-xl flex flex-col gap-3">
           <div>
             <span className="text-2xl">O</span>ver the past 5 years, I've
             discovered a passion for programming and{" "}
